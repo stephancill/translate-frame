@@ -24,8 +24,10 @@ export const GET = (req: NextRequest) => {
     type: "language",
   });
 
+  const languageName = languageNames.of(target);
+
   const actionMetadata: ActionMetadata = {
-    name: "Translate",
+    name: `Translate to ${languageName}`,
     icon: "globe",
     description: `Translate cast text to ${languageNames.of(target)}`,
     aboutUrl: APP_URL!,
