@@ -4,7 +4,7 @@ import { installUrl } from "../utils";
 
 const handler = frames(async (ctx) => {
   const installEnglish = installUrl("en");
-  const installSpanish = installUrl("es");
+  const installChinese = installUrl("zh");
   const installKorean = installUrl("ko");
 
   return {
@@ -24,8 +24,8 @@ const handler = frames(async (ctx) => {
       <Button action="link" target={installEnglish}>
         🇬🇧English
       </Button>,
-      <Button action="link" target={installSpanish}>
-        🇪🇸Spanish
+      <Button action="link" target={installChinese}>
+        🇨🇳Chinese
       </Button>,
       <Button action="link" target={installKorean}>
         🇰🇷Korean
