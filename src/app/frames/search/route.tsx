@@ -43,7 +43,9 @@ export const POST = frames(async (ctx) => {
 
   return {
     image: (
-      <div tw="flex">Install action for {languageNames.of(languageCode)}</div>
+      <div tw="flex text-[36px]">
+        Install action for {languageNames.of(languageCode)}
+      </div>
     ),
     textInput: "Search a language",
     buttons: [

@@ -63,7 +63,7 @@ const handler = frames(async (ctx) => {
   const translation = await translateText(text, target);
 
   return {
-    image: <div tw="flex p-10">{translation}</div>,
+    image: <div tw="flex p-10 text-[42px]">{translation}</div>,
   };
 });
 
