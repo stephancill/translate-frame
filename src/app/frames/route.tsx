@@ -9,8 +9,11 @@ const handler = frames(async (ctx) => {
 
   return {
     image: (
-      <div className="flex">
-        Install language or search for language code e.g. 'en' for English
+      <div tw="flex flex-col">
+        <div tw="text-[52px] mb-4">Translation Action 🌎🌍🌏</div>
+        <div tw="text-[36px]">
+          Install language or search for language code e.g. 'en' for English
+        </div>
       </div>
     ),
     textInput: "Search a language",
@@ -19,13 +22,13 @@ const handler = frames(async (ctx) => {
         🔎 Search
       </Button>,
       <Button action="link" target={installEnglish}>
-        Install 🇬🇧English
+        🇬🇧English
       </Button>,
       <Button action="link" target={installSpanish}>
-        Install 🇪🇸Spanish
+        🇪🇸Spanish
       </Button>,
       <Button action="link" target={installKorean}>
-        Install 🇰🇷Korean
+        🇰🇷Korean
       </Button>,
     ],
   };
