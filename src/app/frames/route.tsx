@@ -22,13 +22,13 @@ const handler = frames(async (ctx) => {
         🔎 Search
       </Button>,
       <Button action="link" target={installEnglish}>
-        🇬🇧English
+        🇬🇧EN
       </Button>,
       <Button action="link" target={installChinese}>
-        🇨🇳Chinese
+        🇨🇳CN
       </Button>,
       <Button action="link" target={installKorean}>
-        🇰🇷Korean
+        🇰🇷KO
       </Button>,
     ],
   };
