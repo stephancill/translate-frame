@@ -16,7 +16,7 @@ const handler = frames(async (ctx) => {
         </div>
       </div>
     ),
-    textInput: "Search a language",
+    textInput: "Search a language code e.g. 'en'",
     buttons: [
       <Button action="post" target={"/search"}>
         🔎 Search

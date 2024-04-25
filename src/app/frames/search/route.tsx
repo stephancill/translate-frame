@@ -7,7 +7,7 @@ export const POST = frames(async (ctx) => {
 
   if (!language) {
     return {
-      textInput: "Search a language",
+      textInput: "Search a language code e.g. 'en'",
       image: <div tw="flex">No language provided</div>,
       buttons: [
         <Button action="post" target={"/search"}>
@@ -28,7 +28,7 @@ export const POST = frames(async (ctx) => {
 
   if (!languageName) {
     return {
-      textInput: "Search a language",
+      textInput: "Search a language code e.g. 'en'",
       image: <div tw="flex">Language '{languageCode}' not found</div>,
       buttons: [
         <Button action="post" target={"/search"}>
@@ -47,7 +47,7 @@ export const POST = frames(async (ctx) => {
         Install action for {languageNames.of(languageCode)}
       </div>
     ),
-    textInput: "Search a language",
+    textInput: "Search a language code e.g. 'en'",
     buttons: [
       <Button action="post" target={"/search"}>
         🔎 Search
