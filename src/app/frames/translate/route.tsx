@@ -1,4 +1,4 @@
-import { redirect } from "frames.js/core";
+import { Button } from "frames.js/core";
 import { GOOGLE_TRANSLATE_API_KEY, HUB_API_URL } from "../../env";
 import { frames } from "../frames";
 
@@ -43,7 +43,26 @@ const handler = frames(async (ctx) => {
   });
   const languageName = languageNames.of(languageCode);
 
-  return redirect(`https://warpcast.sh/translate/${languageName}`);
+  return {
+    image: (
+      <div tw="px-10 flex flex-col">
+        <div tw="text-[52px] mb-4">:(</div>
+        <div tw="text-[36px]">
+          This cast action has been discontinued, please view the recommended
+          alternative below.
+        </div>
+        <div tw="mt-10 text-[36px] text-gray-500">💜 @stephancill</div>
+      </div>
+    ),
+    buttons: [
+      <Button
+        action="post"
+        target={`/redirect?url=https://warpcast.sh/translate/${languageName?.toLowerCase()}`}
+      >
+        View alternative
+      </Button>,
+    ],
+  };
 
   if (!hash) {
     return {
