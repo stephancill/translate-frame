@@ -1,3 +1,4 @@
+import { redirect } from "frames.js/core";
 import { GOOGLE_TRANSLATE_API_KEY, HUB_API_URL } from "../../env";
 import { frames } from "../frames";
 
@@ -35,6 +36,14 @@ const handler = frames(async (ctx) => {
   const fid = ctx.searchParams.fid;
 
   const target = ctx.searchParams.target || "en";
+
+  let languageCode = target.toLowerCase().slice(0, 2);
+  const languageNames = new Intl.DisplayNames(["en"], {
+    type: "language",
+  });
+  const languageName = languageNames.of(languageCode);
+
+  return redirect(`https://warpcast.sh/translate/${languageName}`);
 
   if (!hash) {
     return {
